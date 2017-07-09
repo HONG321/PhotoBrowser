@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gpG-4e-xYQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Water Fall Collection View Controller-->
+        <scene sceneID="8gx-zt-bg6">
+            <objects>
+                <collectionViewController id="gpG-4e-xYQ" customClass="LDWaterFallCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="rAJ-b7-0mn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AVl-wO-Oh3" customClass="WaterfallLayout">
+                            <size key="itemSize" width="146" height="197"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="c0E-W8-aBH" customClass="WaterfallImageCell">
+                                <rect key="frame" x="10" y="0.0" width="146" height="197"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="146" height="197"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yNT-af-C7A">
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="197"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyo-zt-RiY">
+                                            <rect key="frame" x="0.0" y="165" width="146" height="32"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-iy-2rB">
+                                                    <rect key="frame" x="0.0" y="5" width="146" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="CC3-xX-S2h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="lD9-iy-2rB" firstAttribute="leading" secondItem="Pyo-zt-RiY" secondAttribute="leading" id="PGa-qp-Kur"/>
+                                                <constraint firstAttribute="trailing" secondItem="lD9-iy-2rB" secondAttribute="trailing" id="QCK-8w-2qH"/>
+                                                <constraint firstAttribute="centerY" secondItem="lD9-iy-2rB" secondAttribute="centerY" id="Qve-uK-VyR"/>
+                                                <constraint firstAttribute="height" constant="32" id="dC6-oE-Ptf"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yNT-af-C7A" secondAttribute="bottom" id="32x-c0-Ap6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pyo-zt-RiY" secondAttribute="trailing" id="LyL-m9-jB9"/>
+                                    <constraint firstItem="yNT-af-C7A" firstAttribute="top" secondItem="c0E-W8-aBH" secondAttribute="top" id="Nv7-Mr-m4N"/>
+                                    <constraint firstItem="Pyo-zt-RiY" firstAttribute="leading" secondItem="c0E-W8-aBH" secondAttribute="leading" id="Zta-v7-UYN"/>
+                                    <constraint firstItem="yNT-af-C7A" firstAttribute="leading" secondItem="c0E-W8-aBH" secondAttribute="leading" id="cXa-Jt-Zt1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pyo-zt-RiY" secondAttribute="bottom" id="h9E-Dv-3GY"/>
+                                    <constraint firstAttribute="trailing" secondItem="yNT-af-C7A" secondAttribute="trailing" id="moT-Nx-WNv"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="iconView" destination="yNT-af-C7A" id="eUx-HV-7uJ"/>
+                                    <outlet property="priceLabel" destination="lD9-iy-2rB" id="E8Z-VK-9lU"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FooterView" id="n3m-pZ-5J2" customClass="WaterfallFooterView">
+                            <rect key="frame" x="0.0" y="197" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Wx5-i0-iTO">
+                                    <rect key="frame" x="169" y="7" width="37" height="37"/>
+                                    <color key="color" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="centerY" secondItem="Wx5-i0-iTO" secondAttribute="centerY" id="9fV-ba-eu8"/>
+                                <constraint firstAttribute="centerX" secondItem="Wx5-i0-iTO" secondAttribute="centerX" id="BR2-JH-sdU"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="indicator" destination="Wx5-i0-iTO" id="GXy-QR-fKS"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="gpG-4e-xYQ" id="U9h-dv-5JU"/>
+                            <outlet property="delegate" destination="gpG-4e-xYQ" id="vlP-cK-FZo"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="layout" destination="AVl-wO-Oh3" id="LoY-qQ-ruN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqp-jP-Pbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160" y="91"/>
+        </scene>
+        <!--Preview Photo View Controller-->
+        <scene sceneID="xhO-it-yA9">
+            <objects>
+                <viewController storyboardIdentifier="PreviewPhotoVC" id="3EN-fD-ocN" customClass="PreviewPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z3l-WD-R21"/>
+                        <viewControllerLayoutGuide type="bottom" id="TtA-dg-NvO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3la-jw-uyI">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-qy-C2K">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="400"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M8w-qy-C2K" firstAttribute="leading" secondItem="3la-jw-uyI" secondAttribute="leading" id="1OX-f1-BCH"/>
+                            <constraint firstItem="TtA-dg-NvO" firstAttribute="top" secondItem="M8w-qy-C2K" secondAttribute="bottom" id="3nZ-hI-efN"/>
+                            <constraint firstItem="M8w-qy-C2K" firstAttribute="top" secondItem="Z3l-WD-R21" secondAttribute="bottom" id="S3m-Ka-owP"/>
+                            <constraint firstAttribute="trailing" secondItem="M8w-qy-C2K" secondAttribute="trailing" id="kpq-ef-Drl"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="280" height="400"/>
+                    <connections>
+                        <outlet property="imageView" destination="M8w-qy-C2K" id="xeN-t0-w1B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UR8-3U-W2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="49"/>
+        </scene>
+    </scenes>
+</document>
