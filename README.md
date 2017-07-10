@@ -21,3 +21,5 @@
  在- (void)previewingContext:中实现pop的代理方法。pop到图片查看控制器。  
 
 在PreviewPhotoViewController中实现预览操作项数组（即peed的时候向上滑动出现的“复制”和“关闭”菜单）。
+
+![image](https://github.com/HONG321/PhotoBrowser/blob/master/PhotoBrowser/PhotoBrowser/Screenshots/图片查看器.gif)
