@@ -20,6 +20,9 @@
  在- (UIViewController *)previewingContext:中实现peek的代理方法，在WaterFall.storyboard中添加要显示的界面样式。  
  在- (void)previewingContext:中实现pop的代理方法。pop到图片查看控制器。  
 
-在PreviewPhotoViewController中实现预览操作项数组（即peed的时候向上滑动出现的“复制”和“关闭”菜单）。
+在PreviewPhotoViewController中实现预览操作项数组（即peed的时候向上滑动出现的“复制”和“关闭”菜单）。  
+
+---
+动图略大，加载需要时间。。。
 
 ![image](https://github.com/HONG321/PhotoBrowser/blob/master/PhotoBrowser/PhotoBrowser/Screenshots/图片查看器.gif)
